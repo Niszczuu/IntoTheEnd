@@ -4,7 +4,8 @@
         "three": "^0.158.0"
     },
     "scripts": {
-        "start": "npx esbuild --bundle --outfile=main.js --format=esm --watch --sourcemap=inline --servedir=.  main.ts"
+        "start": "npx esbuild --bundle --outfile=main.js --format=esm --watch --sourcemap=inline --servedir=.  main.ts",
+        "build:prod": "npx esbuild --bundle --outfile=main.js --format=esm --minify --tree-shaking=true main.ts && mkdir dist && cp index.html main.js dist"
     },
     "devDependencies": {
         "@types/three": "^0.158.1"
